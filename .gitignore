@@ -1,0 +1,4 @@
+build/*
+agora.gpr
+src/driver/agora-paths.ads
+log

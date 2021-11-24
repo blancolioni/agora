@@ -1,0 +1,12 @@
+project_name = Agora
+source_dir = src
+source_dir = src/dnp
+source_dir = src/driver
+depend = { project = Tropos version = any }
+depend = { project = Leander version = any }
+depend = { project = WLib version = any }
+main_unit = agora-driver
+exec_name = agora
+config_dir = config
+path_unit = { unit = Agora.Paths path = src/driver/agora-paths.ads }
+    

@@ -1,0 +1,82 @@
+{
+	"start_conditions":{
+		"agents":{
+			"farmer":5,
+			"miner":5,
+			"woodcutter":5,
+			"refiner":3,
+			"blacksmith":2,
+			"worker":5
+		}
+	},
+	"goods":[
+		{"id":"food" ,"size":"0.5", "price": 1},
+		{"id":"wood" ,"size":"1.0", "price": 1},
+		{"id":"ore"  ,"size":"1.0", "price": 1},
+		{"id":"work" ,"size":"0.125", "price": 1},
+		{"id":"metal","size":"1.0", "price": 2},
+		{"id":"tools","size":"1.0", "price": 4}
+	],
+	"agents":[
+		{
+			"id":"farmer",
+			"money":20,
+			"inventory":{
+				"start":{"food":1,"tools":1,"wood":1,"work":1},
+				"ideal":{"food":0,"tools":1,"wood":3,"work":1},
+				"max_size":20
+			},
+			"logic":"farmer"
+		},
+		{
+			"id":"miner",
+			"money":20,
+			"inventory":{
+				"start":{"food":1,"tools":1,"ore":0},
+				"ideal":{"food":3,"tools":1,"ore":0},
+				"max_size":20
+			},
+			"logic":"miner"
+		},
+		{
+			"id":"refiner",
+			"money":20,
+			"inventory":{
+				"start":{"food":1,"tools":1,"metal":0,"ore":0},
+				"ideal":{"food":3,"tools":1,"metal":0,"ore":5},
+				"max_size":20
+			},
+			"logic":"refiner"
+		},
+		{
+			"id":"woodcutter",
+			"money":20,
+			"inventory":{
+				"start":{"food":1,"tools":1,"wood":1},
+				"ideal":{"food":3,"tools":1,"wood":0},
+				"max_size":20
+			},
+			"logic":"woodcutter"
+		},
+		{
+			"id":"blacksmith",
+			"money":20,
+			"inventory":{
+				"start":{"food":1,"tools":0,"metal":0,"ore":0},
+				"ideal":{"food":3,"tools":0,"metal":5,"ore":0},
+				"max_size":20
+			},
+			"logic":"blacksmith"
+		},
+		{
+			"id":"worker",
+			"money":20,
+			"inventory":{
+				"start":{"food":1},
+				"ideal":{"food":3},
+				"max_size":20
+			},
+			"logic":"worker"
+		}
+	]
+}
